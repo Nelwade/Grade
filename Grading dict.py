@@ -11,10 +11,11 @@ def grade_input():
     
     subject=input("Please enter the subject: ")
     score=int(input("Please enter the score: "))
-    if score > 100 or score < 0:
+    while score > 100 or score < 0:
         print ("Wrong score values. Please, try again!")
-    else:
-        my_dict[subject]=score
+        subject=input("Please enter the subject: ")
+        score=int(input("Please enter the score: "))
+    my_dict[subject]=score
 
 def grading_system():
     if score > 80:

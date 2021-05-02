@@ -10,7 +10,7 @@ my_dict={}
 def grade_input():
     
     subject=input("Please enter the subject: ")
-    score=int(input("Please enter the score: "))
+    score=int(input("Please enter the {} score: ".format(subject)))
     while score > 100 or score < 0:
         print ("Wrong score values. Please, try again!")
         subject=input("Please enter the subject: ")
@@ -41,7 +41,8 @@ grade_input() #third subject
 grade_input() #fourth subject
 grade_input()
 
-#print(my_dict)
+print() #creates space between outputs
+#print(my_dict) #To test the output of dictionary
 
 for subject, score in my_dict.items():
     grading_system()
@@ -49,6 +50,7 @@ for subject, score in my_dict.items():
 total_score=0
 for score in my_dict.values():
     total_score+=score
+print()
 print("Total Score is: ", total_score)
 
 average_score=total_score/len(my_dict)
